@@ -1,0 +1,234 @@
+mixin intro()
+  -
+    const counterFirst = [
+      {
+        name:"icon-shield",
+        width:100,
+        height:100,
+      },
+        {
+        name:"icon-dollar",
+        width:100,
+        height:220,
+      },
+        {
+        name:"icon-soccer",
+         width:100,
+        height:100,
+      },
+        {
+        name:"icon-m",
+         width:100,
+        height:100,
+      },
+        {
+        name:"icon-shield",
+         width:100,
+        height:100,
+      },
+           {
+        name:"icon-dollar",
+         width:100,
+        height:220,
+      },
+           {
+        name:"icon-soccer",
+         width:100,
+        height:100,
+      },
+             {
+        name:"icon-shield",
+         width:100,
+        height:100,
+      },
+           {
+        name:"icon-dollar",
+         width:100,
+        height:220,
+      },
+           {
+        name:"icon-soccer",
+         width:100,
+        height:100,
+      },
+
+    ]
+  -
+    const counterSecond = [
+       {
+        name:"icon-shield",
+         width:100,
+        height:100,
+      },
+        {
+        name:"icon-m",
+         width:100,
+        height:100,
+      },
+        {
+        name:"icon-timer",
+         width:100,
+        height:100,
+      },
+        {
+        name:"icon-world",
+         width:100,
+        height:220,
+      },
+        {
+        name:"icon-m",
+         width:100,
+        height:100,
+      },
+           {
+        name:"icon-timer",
+         width:100,
+        height:100,
+      },
+           {
+        name:"icon-crown",
+         width:100,
+        height:100,
+      },
+            {
+        name:"icon-m",
+         width:100,
+        height:100,
+      },
+           {
+        name:"icon-timer",
+         width:100,
+        height:100,
+      },
+           {
+        name:"icon-crown",
+         width:100,
+        height:100,
+      },
+
+
+
+    ]
+  -
+    const counterThird = [
+      {
+        name:"icon-dollar",
+         width:100,
+        height:220,
+      },
+        {
+        name:"icon-m",
+         width:100,
+        height:100,
+      },
+        {
+        name:"icon-shield",
+         width:100,
+        height:100,
+      },
+        {
+        name:"icon-soccer",
+         width:100,
+        height:100,
+      },
+        {
+        name:"icon-shield",
+         width:100,
+        height:100,
+      },
+           {
+        name:"icon-crown",
+         width:100,
+        height:100,
+      },
+           {
+        name:"icon-m",
+         width:100,
+        height:100,
+      },
+              {
+        name:"icon-shield",
+         width:100,
+        height:100,
+      },
+           {
+        name:"icon-crown",
+         width:100,
+        height:100,
+      },
+           {
+        name:"icon-m",
+         width:100,
+        height:100,
+      },
+
+
+    ]
+  -
+    const blogSlide = [
+      {
+        href: "https://www.kuhnyatv.ru/recipes/49124-firmennye-syrniki-ivleva/",
+        text: "Payment methods: Skrill, Neteller, webmoney, Bank transfer",
+        date:"10.02.2023",
+
+      },
+      {
+        href: "#",
+        text: "Payment methods: Skrill, Neteller, webmoney, Bank transfer",
+        date:"10.02.2023",
+
+      },
+       {
+        href: "#",
+        text: "Payment methods: Skrill, Neteller, webmoney, Bank transfer",
+        date:"10.02.2023"
+      },
+         {
+        href: "#",
+        text: "Payment methods: Skrill, Neteller, webmoney, Bank transfer",
+        date:"10.02.2023"
+      },
+              {
+        href: "#",
+        text: "Payment methods: Skrill, Neteller, webmoney, Bank transfer",
+        date:"10.02.2023"
+      },
+                    {
+        href: "#",
+        text: "Payment methods: Skrill, Neteller, webmoney, Bank transfer",
+        date:"10.02.2023"
+      },
+
+    ]
+  .container
+    .intro-wrapper
+
+        section.intro
+          h1 HOUSE OF <span>GAMBLING</span>
+          p Raise your ROI with direct advertiser
+          button.btn.btn--blue.btn--intro(type="button", aria-label="Зарегистрироваться") Become a Partner
+        section.intro-blog
+          h2 Blog
+          .intro-blog__wrapper
+            ul.intro-blog__list
+              each item in blogSlide
+                li.intro-blog__item
+                  a(href=item.href)
+                    p!= item.text
+                    time(datetime=item.date)=item.date
+        .intro-counters.counters
+          .counters-item.counters-item--first
+            each item in counterFirst
+              .counters-icon
+                +icon(item.name , item.width, item.height)
+          .counters-item.counters-item--second
+            each itm in counterSecond
+              .counters-icon
+                +icon(itm.name , itm.width, itm.height)
+          .counters-item.counters-item--third
+            each it in counterThird
+              .counters-icon
+                +icon(it.name , it.width, it.height)
+
+
+

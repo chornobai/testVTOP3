@@ -1,0 +1,53 @@
+mixin header(headerMods, currentPage)
+  -
+    const headerLinks = [
+      {
+        href: "#",
+        text: "About us"
+      },
+      {
+        href: "#",
+        text: "Brands"
+      },
+      {
+        href: "#",
+        text: "Commissions"
+      },
+      {
+        href: "#",
+        text: "News"
+      },
+        {
+        href: "#",
+        text: "Contact us"
+      },
+          {
+        href: "#",
+        text: "Careers"
+      },
+    ]
+
+
+  header.header(class=headerMods)
+    .container
+
+      nav.header-nav
+        button.btn.btn--nav-toggle(type="button", aria-label="Отображения меню", aria-pressed="false")
+        .header-nav__wrapper
+          ul.header-nav__list
+            each link, index in headerLinks
+              li.header-nav__item
+                a.header-nav__link(href=link.href)=link.text
+        .header-nav_login.login
+          ul.login-list
+            li.login-item.login-item--language
+              button.btn.btn--language(type= "button", aria-label="Сменить язык")
+                span En
+                +icon("icon-planet", 16, 16)
+            li.login-item.login-item--login
+              button.btn.btn--login(type="button", aria-label="Вход") Log in
+            li.login-item.login-item--sing-up
+              button.btn.btn--singup(type="button", aria-label="Регестрация") Sing up
+
+
+

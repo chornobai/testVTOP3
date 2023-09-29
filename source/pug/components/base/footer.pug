@@ -1,0 +1,82 @@
+mixin footer(footerMods)
+  -
+    const footerLinks = [
+      {
+        href: "#",
+        text: "Terms & Conditions"
+      },
+      {
+        href: "#",
+        text: "Cookies"
+      },
+      {
+        href: "#",
+        text: "Contacts"
+      },
+      {
+        href: "#",
+        text: "Careers"
+      },
+        {
+        href: "#",
+        text: "Brand Guide"
+      },
+
+    ]
+  -
+    const footerSocial = [
+      {
+        href:"#",
+        name: "icon-twitter"
+      },
+       {
+         href:"#",
+        name: "icon-facebook"
+      },
+       {
+         href:"#",
+        name: "icon-insta"
+      },
+       {
+         href:"#",
+        name: "icon-link"
+      },
+          {
+         href:"#",
+        name: "icon-youtube"
+      },
+       {
+         href:"#",
+        name: "icon-smth"
+      },
+       {
+         href:"#",
+        name: "icon-telegram"
+      },
+       {
+         href:"#",
+        name: "icon-vk"
+      },
+
+
+
+    ]
+
+  footer.footer(class=footerMods)
+    .container
+      section.footer-nav
+        h2.visually-hidden
+        ul.footer-nav__list
+          each item in footerLinks
+            li.footer-nav__item
+              a.footer-nav__link(href=item.href)=item.text
+      section.footer-social
+        h2 Our social media:
+        ul.footer-social__list
+          each link in footerSocial
+            li.footer-social__item
+              a.footer-social__link(href=link.href)
+                +icon(link.name,32, 32)
+
+
+

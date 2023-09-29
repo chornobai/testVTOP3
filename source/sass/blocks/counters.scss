@@ -1,0 +1,46 @@
+.counters{
+  opacity:0.7;
+  position:absolute;
+  top:0;
+  left: 50%;
+  transform: translateX(-30%);
+  display:grid;
+  grid-template-columns: min-content min-content min-content;
+  grid-column-gap: 18px;
+  z-index: -2;
+  transition: 0.3s;
+  @include vp-1680 {
+    transform: translateX(-50%) scale(0.8);
+  }
+
+  @include vp-1279 {
+    transform:translateY(-10.5%) translateX(-50%) scale(0.8) rotate(90deg);
+  }
+
+  @include vp-767 {
+    transform:translateY(-17%) translateX(-71%) scale(0.6) rotate(90deg);
+  }
+}
+.counters-item{
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+  // animation: move-y-up 30s linear infinite  both;
+  // &--first,
+  // &--third{
+  //   animation: move-y-down 30s linear infinite  both;
+  // }
+
+}
+.counters-icon{
+
+  margin: 0 0 18px 0;
+  display: block;
+  svg{
+    margin: 0;
+  }
+}
+

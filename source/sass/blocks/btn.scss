@@ -1,0 +1,107 @@
+.btn {
+  display: inline-flex;
+  margin: 10px 0;
+  padding: 10px 20px;
+
+  color: $clean-white;
+  text-transform: uppercase;
+
+  background-color: transparent;
+  border: 2px solid $purple;
+  border-radius: 24px;
+  cursor: pointer;
+
+  transition: opacity $trans-default;
+
+  &--singup {
+    background-color: $main-blue;
+    border-color: $main-blue;
+    @include vp-576 {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+
+    }
+  }
+
+  &--login {
+    @include vp-576 {
+      display: flex;
+      justify-content: center;
+      background-color: $main-deep-blue;
+      width:100%;
+    }
+  }
+
+  &--nav-toggle {
+    border: none;
+    background: url("../img/svg/icon-burger.svg") no-repeat center;
+    display: none;
+    @include vp-1279 {
+      display: block;
+    }
+  }
+
+  &--language {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    span {
+      margin: 0;
+    }
+    svg {
+      margin-right: size(8px);
+    }
+
+    @include vp-576 {
+      padding:8px;
+      svg{
+
+        margin: 0;
+        width:20px;
+        height: 20px;
+      }
+      span {
+        display: none;
+      }
+    }
+  }
+
+
+  &--intro{
+    border-radius: 48px;
+
+    background-color: $main-blue;
+    border-color: $main-blue;
+    font-size: calc(18px + (24 - 18)*((100vw - 320px)/(1920 - 320)));
+    font-weight: 600;
+    line-height: 32px;
+    text-transform: uppercase;
+    padding: 20px 72px;
+    @include vp-1279{
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+
+  }
+  &:disabled {
+    opacity: 0.5;
+
+    pointer-events: none;
+  }
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+    &:active{
+      transform: scale(0.9);
+      transition: 0.3s;
+    }
+  }
+}

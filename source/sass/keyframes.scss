@@ -1,0 +1,71 @@
+// используйте для скрытия нежелательных анимаций-скачков при поворотах экрана
+@keyframes disableBreakpointAnimation {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-center-reverce {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes move-y-up {
+  0% {
+
+    transform: translateY(0);
+  }
+  100% {
+
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes move-y-down {
+  0% {
+
+    transform: translateY(0);
+  }
+  100% {
+
+    transform: translateY(100%);
+  }
+}
+
+@keyframes color-change-5x {
+  0% {
+    color: $purple;
+  }
+  25%{
+    color:#bce0ff;
+  }
+  50%{
+    color:#ca9df2;
+  }
+  100% {
+    color: $main-blue;
+  }
+}
